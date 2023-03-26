@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-20.04
-    container: https://github.com/Jeffery186/docker-ubuntu-mingw:main
+    container: https://github.com/Jeffery186/docker-ubuntu-mingw
     steps:
       - uses: actions/checkout@v2
       - name: Build

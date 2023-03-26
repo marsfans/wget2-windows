@@ -19,8 +19,8 @@ jobs:
 
 
           apt-get update
-
-          apt-get install -yq --no-install-suggests --no-install-recommends make gcc libc-dev sudo mingw-w64
+          apt-get upgrade 
+          apt-get install -y make gcc libc-dev mingw-w64 liblzma-dev
       - uses: actions/checkout@v2
       - name: Build
         run: |

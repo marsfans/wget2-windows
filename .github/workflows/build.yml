@@ -10,9 +10,17 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
-    container: github.com/Jeffery186/docker-ubuntu-mingw:main
+    runs-on: ubuntu-22.04
+    #container: github.com/Jeffery186/docker-ubuntu-mingw:main
     steps:
+      - name: Installation depends
+
+        run: |
+
+
+          apt-get update
+
+          apt-get install -yq --no-install-suggests --no-install-recommends make gcc libc-dev sudo mingw-w64
       - uses: actions/checkout@v2
       - name: Build
         run: |

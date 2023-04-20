@@ -16,7 +16,7 @@ jobs:
       - name: Installation depends
 
         run: |
-          chmod +x install.sh
+          chmod +x ./install.sh
           /bin/bash ./install.sh
 
           # sudo apt-get update

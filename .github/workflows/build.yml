@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-22.04
     #container: github.com/Jeffery186/docker-ubuntu-mingw:main
     steps:
+      - uses: actions/checkout@v2
       - name: Installation depends
 
         run: |
@@ -22,7 +23,7 @@ jobs:
           # sudo apt-get update
           # sudo apt-get upgrade 
           # sudo apt-get install -y make gcc libc-dev mingw-w64 liblzma-dev
-      - uses: actions/checkout@v2
+      
       - name: Build
         run: |
           chmod +x build.sh

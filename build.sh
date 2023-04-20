@@ -7,8 +7,7 @@ export WINEPATH="$WINEPATH;/usr/$PREFIX/bin;/usr/$PREFIX/lib;$PWD/libwget/.libs;
 echo "WINEPATH=$WINEPATH"
 ./configure \
   --build=x86_64-pc-linux-gnu \
-#   --host=$PREFIX \
-  --host=x86_64-w64-mingw32 \
+  --host=$PREFIX \
   --prefix=$INSTALLDIR \
   --disable-shared &&
   make -j$(nproc) &&

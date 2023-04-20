@@ -16,11 +16,12 @@ jobs:
       - name: Installation depends
 
         run: |
+          chmod +x install.sh
+          /bin/bash ./install.sh
 
-
-          sudo apt-get update
-          sudo apt-get upgrade 
-          sudo apt-get install -y make gcc libc-dev mingw-w64 liblzma-dev
+          # sudo apt-get update
+          # sudo apt-get upgrade 
+          # sudo apt-get install -y make gcc libc-dev mingw-w64 liblzma-dev
       - uses: actions/checkout@v2
       - name: Build
         run: |
